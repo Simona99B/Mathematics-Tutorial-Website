@@ -1,0 +1,199 @@
+body{
+    font: Arial, Helvetica, sans-serif;
+}
+#container {
+    width: 1050px;
+   /*0 za gore i dole a auto za levo i desno za da se centrira*/
+    margin: 0 auto;
+}
+/*poso inace u header do sea ti bea samo brand i searchbox i 2ta ti bea floating elements i se ponasha ka da nema elementi, zatoa mora da mu dademo visina, i plus neso so ne e floating za da postoi na nekoj nacin*/
+#header{
+    height: 100px;
+    padding: 10px 0;
+}
+#brand{
+    float: left;
+}
+
+/*sea ce pristapime do linkovite sto se vo headings1*/
+h1 a{
+    font-size: 50px;
+    font-weight: 200;
+    color: #B16BD6;
+    text-decoration: none;
+}
+
+#searchBox{
+    float: right;
+    background: linear-gradient(#DEF1AC, #B9EA57);
+    background: -webkit-linear-gradient(#DEF1AC, #B9EA57); /*safari*/
+    background: -o-linear-gradient(#DEF1AC, #B9EA57); /*opera*/
+    background: -moz-linear-gradient(#DEF1AC, #B9EA57); /*mozila firefox*/
+    width: 400px;
+    height: 50px;
+    padding: 20px 20px 0px 20px;
+    margin-top: 20px;
+    
+}
+
+.text{
+    float: left;
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    color: #E66C0C;
+    /*right center  - right za horizonatlno da bide desno postvena a center u odnos na vertikalno kako da e postavena*/
+    background: white url(images/search.png) right center no-repeat;
+    border: 1px solid #E3E79F;
+}
+
+.submit{
+    float: right;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    /*the property background-color ne moze da se koristi za buttons*/
+    background: #A751D6;
+    font-size: 15px;
+}
+.clear{
+    /*ako ne napishemo clear togas ce dojde izmegju fb i apple kj so ima prazno mesto,
+    znaci ako nekoas neso se dopise da ne vlaga kj so ce najde prazno mesto megju floating, zatoa e good practise vake da napishemo*/
+    clear: both;
+}
+
+#menu{
+    height: 70px;
+    background: linear-gradient(#F6F48F, #D8D83B);
+    background: -webkit-linear-gradient(#F6F48F, #D8D83B);
+    background: -o-linear-gradient(#F6F48F, #D8D83B);
+    background: -moz-linear-gradient(#F6F48F, #D8D83B);
+    padding: 7px 0px;
+}
+ul{
+    list-style: none;
+}
+#menu ul li{
+    
+    float: left;
+    padding: 0 30px;
+    height: 30px;
+    border-right: 1px solid #5d12e7;
+}
+#menu ul li:last-child{
+    border-right: none;
+}
+#menu ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #5d12e7;
+    line-height: 30px;
+    /*atributov so go menjavamo e font-size, 1s- duration na tranzicijava, linear- znaci deka brzinata na tranzicijava e ista od pocetokot do krajot, ease- brzinata pocnue sporo pa brza pa zavrshue sporo*/
+    transition: font-size 0.3s ease;
+    -webkit-transition: font-size 0.3s ease; /*safari*/
+    -moz-transition: font-size 0.3s ease; /*mozilafirefox*/
+    -o-transition: font-size 0.3s ease; /*opera*/
+    -ms-transition: font-size 0.3s ease; /*internet explorer*/
+}
+#menu ul li a:hover, #menu ul li a.active{
+    font-size: 20px;
+    font-weight: bold;
+    color: #B314DB;
+}
+
+#introduction{
+    background: linear-gradient(#DCF0A6,#B9EA55);
+    background: -wevkit-linear-gradient(#DCF0A6,#B9EA55);
+    background: -o-linear-gradient(#DCF0A6,#B9EA55);
+    background: -moz-linear-gradient(#DCF0A6,#B9EA55);
+    padding: 23px;
+    margin: 16px 0;
+}
+#introduction h3{
+    font-size: 45px;
+    color: #316901;
+    font-weight: normal;
+}
+#introduction p{
+    font-size:  25px;
+    color: #628F19;
+    text-align: justify;
+}
+
+.sidebar{
+    height: 500px;
+    width: 450px;
+    border: 1px solid #BAF46F;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+
+
+.sidebar h3{
+    color: #B314DB;
+    font-size: 30px;
+
+}
+
+.sidebar ul{
+    padding-top: 8px;
+}
+
+#leftsidebar ul li{
+/*
+    padding-bottom: 6px; 
+    padding-left: 10px;
+*/
+    padding: 6px 0px 6px 10px;  
+    list-style-image: url(images/arrow.png);
+}
+
+#rightsidebar ul li{
+/*
+    ako staes padding top i botoom isto tekstot ce ti bide centered with the picture
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 70px;
+*/
+/*    mozes u 1 da ne se mucis top right down left*/
+    padding: 17px 0px 17px 70px;
+    /*horizontaly - left, verticali - center*/
+    background: url(images/tick.png) no-repeat left center;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #5d12e7;
+    transition: font-size 0.3s ease;
+    -webkit-transition: font-size 0.3s ease; /*safari*/
+    -moz-transition: font-size 0.3s ease; /*mozilafirefox*/
+    -o-transition: font-size 0.3s ease; /*opera*/
+    -ms-transition: font-size 0.3s ease; /*internet explorer*/
+}
+.sidebar ul li a:hover, .sidebar ul li a.active{
+    text-decoration: none;
+    color: #B314DB;
+    font-size: 23px;
+    font-weight: bold;
+}
+#leftsidebar{
+    float: left;
+
+}
+
+#rightsidebar{
+    float: right;
+}
+.footer{
+    height: 60px;
+    background: linear-gradient(#F3F086,#D5D534);
+    background: -moz-linear-gradient(#F3F086,#D5D534);
+    background: -o-linear-gradient(#F3F086,#D5D534);
+    background: -webkit-linear-gradient(#F3F086,#D5D534);
+    padding: 10px 30px;
+    /*margin u odnos na footer so left i right side*/
+    margin-top: 15px;
+    
+}
